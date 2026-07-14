@@ -54,7 +54,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ============ 粒子背景 ============ */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -66,7 +65,6 @@
             opacity: 0.5;
         }
 
-        /* ============ 导航栏 ============ */
         .navbar {
             position: fixed;
             top: 0;
@@ -175,7 +173,6 @@
             background: linear-gradient(135deg, var(--gold-light), #e0c060);
             color: #060d18;
         }
-        /* 搜索框 */
         .nav-search-wrap {
             position: relative;
             display: flex;
@@ -215,7 +212,6 @@
         .nav-search-input:focus~.nav-search-icon {
             color: #fff;
         }
-        /* 汉堡菜单 */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -294,7 +290,6 @@
             }
         }
 
-        /* ============ HERO SECTION ============ */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -344,14 +339,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
             }
         }
         .hero-badge {
@@ -474,7 +461,6 @@
             font-size: 1.1rem;
         }
 
-        /* ============ 通用板块 ============ */
         .section {
             position: relative;
             z-index: 1;
@@ -517,7 +503,6 @@
             margin-bottom: 20px;
         }
 
-        /* ============ 关于我们 - 数据统计 ============ */
         .about-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -574,7 +559,6 @@
             letter-spacing: 2px;
         }
 
-        /* ============ 产品/业务卡片 ============ */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -605,14 +589,6 @@
             border-color: var(--border-gold);
             transform: translateY(-8px);
             box-shadow: var(--shadow-gold), var(--shadow-card);
-        }
-        .product-card-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            background: var(--bg-secondary);
-            position: relative;
         }
         .product-card-placeholder {
             width: 100%;
@@ -659,7 +635,6 @@
             margin-bottom: 10px;
         }
 
-        /* ============ 企业文化 - 兄弟聚餐图 ============ */
         .culture-section {
             background: var(--bg-primary);
             position: relative;
@@ -744,7 +719,6 @@
             font-size: 1rem;
         }
 
-        /* ============ 董事长风采 - 老总办公室 ============ */
         .leader-section {
             position: relative;
             z-index: 1;
@@ -841,7 +815,6 @@
             margin-top: 20px;
         }
 
-        /* ============ 新闻动态 ============ */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -904,7 +877,6 @@
             letter-spacing: 3px;
         }
 
-        /* ============ 合作伙伴 ============ */
         .partners-row {
             display: flex;
             flex-wrap: wrap;
@@ -933,7 +905,6 @@
             background: rgba(201, 169, 110, 0.04);
         }
 
-        /* ============ 联系我们 ============ */
         .contact-section {
             background: var(--bg-primary);
             position: relative;
@@ -989,16 +960,10 @@
             box-shadow: 0 0 20px var(--gold-glow);
             background: rgba(255, 255, 255, 0.06);
         }
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-            letter-spacing: 1px;
-        }
         .contact-form textarea {
             min-height: 120px;
         }
 
-        /* ============ 页脚 ============ */
         .footer {
             background: #040a14;
             border-top: 1px solid var(--border-subtle);
@@ -1060,7 +1025,6 @@
             letter-spacing: 2px;
         }
 
-        /* ============ 回到顶部 ============ */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -1094,7 +1058,6 @@
             transform: translateY(-4px);
         }
 
-        /* ============ 图片占位通用样式 ============ */
         .img-placeholder-box {
             width: 100%;
             min-height: 220px;
@@ -1122,7 +1085,6 @@
             opacity: 0.5;
         }
 
-        /* ============ 响应式微调 ============ */
         @media (max-width: 768px) {
             .section {
                 padding: 60px 20px;
@@ -1161,11 +1123,8 @@
     </style>
 </head>
 <body>
-
-    <!-- 粒子背景画布 -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- ==================== 导航栏 ==================== -->
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="#hero" class="nav-logo">
@@ -1192,7 +1151,6 @@
         </div>
     </nav>
 
-    <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="hero-bg-gradient"></div>
         <div class="hero-grid-lines"></div>
@@ -1217,7 +1175,6 @@
         </div>
     </section>
 
-    <!-- ==================== 集团概况 ==================== -->
     <section class="section" id="about">
         <div class="section-inner">
             <span class="section-label">集团概况</span>
@@ -1228,7 +1185,6 @@
                 集团已成长为涵盖房地产开发、国际贸易、能源矿产、金融投资、酒店文旅及
                 科技互联网六大核心板块的综合性产业投资控股集团。业务遍及全球30余个国家和地区。
             </p>
-            <!-- 数据统计 -->
             <div class="about-stats">
                 <div class="stat-card">
                     <div class="stat-number" data-target="19">0</div>
@@ -1250,7 +1206,6 @@
         </div>
     </section>
 
-    <!-- ==================== 核心业务 / 产品介绍 ==================== -->
     <section class="section" id="products" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">核心业务</span>
@@ -1260,7 +1215,6 @@
                 集团坚持多元化发展战略，六大核心业务板块协同发展，构建了稳健且富有韧性的产业生态体系。
             </p>
             <div class="products-grid">
-                <!-- 产品1 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-building-columns"></i>
@@ -1272,7 +1226,6 @@
                         <p>涵盖甲级写字楼、高端住宅、商业综合体开发，项目分布于亚太主要城市核心地段。</p>
                     </div>
                 </div>
-                <!-- 产品2 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-globe"></i>
@@ -1284,7 +1237,6 @@
                         <p>大宗商品进出口、供应链管理，与全球50+国家建立稳定贸易合作关系。</p>
                     </div>
                 </div>
-                <!-- 产品3 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-gem"></i>
@@ -1296,7 +1248,6 @@
                         <p>拥有多个海外矿产开采权，涵盖铜、金、锂等战略资源，保障国家能源安全。</p>
                     </div>
                 </div>
-                <!-- 产品4 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-chart-line"></i>
@@ -1308,7 +1259,6 @@
                         <p>私募股权、风险投资、资产管理，管理规模超500亿人民币。</p>
                     </div>
                 </div>
-                <!-- 产品5 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-hotel"></i>
@@ -1320,7 +1270,6 @@
                         <p>旗下拥有多个高端酒店品牌及文旅度假项目，打造极致旅居体验。</p>
                     </div>
                 </div>
-                <!-- 产品6 -->
                 <div class="product-card">
                     <div class="product-card-placeholder">
                         <i class="fa-solid fa-microchip"></i>
@@ -1336,7 +1285,6 @@
         </div>
     </section>
 
-    <!-- ==================== 企业文化 - 兄弟聚餐图 ==================== -->
     <section class="section culture-section" id="culture">
         <div class="section-inner">
             <span class="section-label">企业文化</span>
@@ -1348,7 +1296,7 @@
             </p>
             <div class="culture-grid">
                 <div class="culture-image-wrap">
-                    <img src="https://i.ibb.co/C5Z2jmDM/6ad9ea966c97eeae4eefdf87e841ac.jpg"
+                    <img src="https://i.postimg.cc/5NCcjDfD/6ad9ea966c97eeae4eefdf87e841ac.jpg"
                     alt="澳鼎集团兄弟聚餐 - 团队建设"
                     loading="lazy"
                     onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
@@ -1376,7 +1324,6 @@
         </div>
     </section>
 
-    <!-- ==================== 董事长风采 - 老总办公室 ==================== -->
     <section class="section leader-section" id="leader">
         <div class="section-inner">
             <span class="section-label">董事长风采</span>
@@ -1405,7 +1352,7 @@
                     </div>
                 </div>
                 <div class="leader-image-wrap">
-                    <img src="https://i.ibb.co/Q0MtVSj/16f09cfbf37fd0aab9d230c2f2a610.jpg"
+                    <img src="https://i.postimg.cc/HsyGjFpC/16f09cfbf37fd0aab9d230c2f2a610.jpg"
                     alt="澳鼎集团董事长办公室"
                     loading="lazy"
                     onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
@@ -1419,7 +1366,6 @@
         </div>
     </section>
 
-    <!-- ==================== 新闻动态 ==================== -->
     <section class="section" id="news" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">新闻动态</span>
@@ -1451,7 +1397,6 @@
         </div>
     </section>
 
-    <!-- ==================== 合作伙伴 ==================== -->
     <section class="section" id="partners">
         <div class="section-inner" style="text-align:center;">
             <span class="section-label">合作伙伴</span>
@@ -1473,7 +1418,6 @@
         </div>
     </section>
 
-    <!-- ==================== 联系我们 ==================== -->
     <section class="section contact-section" id="contact">
         <div class="section-inner">
             <span class="section-label">联系我们</span>
@@ -1512,7 +1456,6 @@
         </div>
     </section>
 
-    <!-- ==================== 页脚 ==================== -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-col">
@@ -1555,13 +1498,11 @@
         </div>
     </footer>
 
-    <!-- 回到顶部 -->
     <button class="back-to-top" id="backToTop" aria-label="回到顶部">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <script>
-        // ============ 粒子背景 ============
         (function() {
             const canvas = document.getElementById('particles-canvas');
             const ctx = canvas.getContext('2d');
@@ -1611,7 +1552,6 @@
                     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                     ctx.fillStyle = `rgba(200,170,110,${p.alpha})`;
                     ctx.fill();
-                    // 连线
                     for (let j = i + 1; j < particles.length; j++) {
                         const dx = p.x - particles[j].x;
                         const dy = p.y - particles[j].y;
@@ -1631,7 +1571,6 @@
             drawParticles();
         })();
 
-        // ============ 导航栏滚动效果 ============
         const navbar = document.getElementById('navbar');
         const backToTop = document.getElementById('backToTop');
 
@@ -1649,7 +1588,6 @@
             }
         });
 
-        // ============ 汉堡菜单 ============
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
 
@@ -1658,7 +1596,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // 点击导航链接关闭移动端菜单
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -1666,12 +1603,10 @@
             });
         });
 
-        // ============ 回到顶部 ============
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // ============ 数字递增动画 ============
         function animateNumbers() {
             const statNumbers = document.querySelectorAll('.stat-number[data-target]');
             statNumbers.forEach(el => {
@@ -1696,7 +1631,6 @@
             });
         }
 
-        // 使用 IntersectionObserver 触发数字动画
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1711,7 +1645,6 @@
             statsObserver.observe(aboutSection);
         }
 
-        // ============ 滚动渐入动画 ============ */
         const fadeInElements = document.querySelectorAll(
             '.product-card, .news-card, .stat-card, .culture-image-wrap, .leader-image-wrap, .partner-placeholder'
         );
@@ -1733,7 +1666,6 @@
             fadeObserver.observe(el);
         });
 
-        // ============ 平滑滚动（兼容性） ============
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
@@ -1749,7 +1681,6 @@
             });
         });
 
-        // ============ 搜索框交互 ============
         const searchInput = document.querySelector('.nav-search-input');
         if (searchInput) {
             searchInput.addEventListener('keypress', function(e) {
