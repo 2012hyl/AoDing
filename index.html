@@ -66,7 +66,7 @@
             opacity: 0.5;
         }
 
-        /* ============ 导航栏 (原有) ============ */
+        /* 导航栏 */
         .navbar {
             position: fixed;
             top: 0;
@@ -175,7 +175,6 @@
             background: linear-gradient(135deg, var(--gold-light), #e0c060);
             color: #060d18;
         }
-        /* 搜索框 */
         .nav-search-wrap {
             position: relative;
             display: flex;
@@ -215,7 +214,6 @@
         .nav-search-input:focus~.nav-search-icon {
             color: #fff;
         }
-        /* 汉堡菜单 */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -294,7 +292,7 @@
             }
         }
 
-        /* ============ HERO (原有) ============ */
+        /* HERO */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -455,7 +453,6 @@
             font-size: 1.1rem;
         }
 
-        /* ============ 通用板块 ============ */
         .section {
             position: relative;
             z-index: 1;
@@ -498,7 +495,6 @@
             margin-bottom: 20px;
         }
 
-        /* ============ 集团概况数据 (原有) ============ */
         .about-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -555,7 +551,7 @@
             letter-spacing: 2px;
         }
 
-        /* ============ 新增：通栏大图样式 ============ */
+        /* 通栏大图 */
         .full-width-image {
             width: 100%;
             border-radius: var(--radius-lg);
@@ -580,7 +576,7 @@
             transform: scale(1.02);
         }
 
-        /* ============ 新增：6宫格卡片样式 ============ */
+        /* 6宫格卡片 */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -638,7 +634,7 @@
             line-height: 1.7;
         }
 
-        /* ============ 原有产品卡片 (保留) ============ */
+        /* 原有产品卡片 */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -715,11 +711,8 @@
             margin-bottom: 10px;
         }
 
-        /* ============ 企业文化 (原有) ============ */
         .culture-section {
             background: var(--bg-primary);
-            position: relative;
-            z-index: 1;
         }
         .culture-grid {
             display: grid;
@@ -800,10 +793,7 @@
             font-size: 1rem;
         }
 
-        /* ============ 董事长风采 (原有) ============ */
         .leader-section {
-            position: relative;
-            z-index: 1;
             background: var(--bg-deep);
         }
         .leader-grid {
@@ -897,7 +887,6 @@
             margin-top: 20px;
         }
 
-        /* ============ 新闻动态 ============ */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -960,7 +949,6 @@
             letter-spacing: 3px;
         }
 
-        /* ============ 合作伙伴 ============ */
         .partners-row {
             display: flex;
             flex-wrap: wrap;
@@ -989,11 +977,8 @@
             background: rgba(201, 169, 110, 0.04);
         }
 
-        /* ============ 联系我们 ============ */
         .contact-section {
             background: var(--bg-primary);
-            position: relative;
-            z-index: 1;
         }
         .contact-grid {
             display: grid;
@@ -1049,7 +1034,6 @@
             min-height: 120px;
         }
 
-        /* ============ 页脚 ============ */
         .footer {
             background: #040a14;
             border-top: 1px solid var(--border-subtle);
@@ -1111,7 +1095,6 @@
             letter-spacing: 2px;
         }
 
-        /* ============ 回到顶部 ============ */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -1183,10 +1166,8 @@
     </style>
 </head>
 <body>
-    <!-- 粒子背景画布 -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- ==================== 导航栏 ==================== -->
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="#hero" class="nav-logo">
@@ -1213,7 +1194,6 @@
         </div>
     </nav>
 
-    <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="hero-bg-gradient"></div>
         <div class="hero-grid-lines"></div>
@@ -1237,7 +1217,6 @@
         </div>
     </section>
 
-    <!-- ==================== 集团概况 ==================== -->
     <section class="section" id="about">
         <div class="section-inner">
             <span class="section-label">集团概况</span>
@@ -1246,29 +1225,15 @@
             <p class="section-desc">
                 澳鼎集团是一家专注于校园生态运营与青年创业孵化的综合性平台，以校园场景为基础，依托数字化运营能力，持续构建覆盖高校生活、校园服务、资源整合及创业发展的多元生态体系。
             </p>
-            <!-- 数据统计 -->
             <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-number" data-target="20" data-suffix="+">0</div>
-                    <div class="stat-label">高校合作社群</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="5000" data-suffix="+">0</div>
-                    <div class="stat-label">累计服务学生</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="10" data-suffix="+">0</div>
-                    <div class="stat-label">校园业务板块</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="100" data-suffix="+">0</div>
-                    <div class="stat-label">校园创业合伙人</div>
-                </div>
+                <div class="stat-card"><div class="stat-number" data-target="20" data-suffix="+">0</div><div class="stat-label">高校合作社群</div></div>
+                <div class="stat-card"><div class="stat-number" data-target="5000" data-suffix="+">0</div><div class="stat-label">累计服务学生</div></div>
+                <div class="stat-card"><div class="stat-number" data-target="10" data-suffix="+">0</div><div class="stat-label">校园业务板块</div></div>
+                <div class="stat-card"><div class="stat-number" data-target="100" data-suffix="+">0</div><div class="stat-label">校园创业合伙人</div></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 核心业务 (原有板块 + 新增内容) ==================== -->
     <section class="section" id="products" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">核心业务</span>
@@ -1278,252 +1243,139 @@
                 集团围绕校园传媒、生活服务、电商零售、二手交易、知识共享及创业孵化六大板块，打造综合性校园服务平台。
             </p>
 
-            <!-- ========= 新增：通栏大图 ========= -->
+            <!-- ===== 通栏大图（图片已更新） ===== -->
             <div class="full-width-image">
-                <img src="https://i.postimg.cc/d0jpzSd1/84030810-3A09-49E7-B4B0-73316BB6B3C3.png" alt="澳鼎校园生态场景" loading="lazy"
+                <img src="https://i.postimg.cc/YS3FXxJ2/1696.jpg" alt="澳鼎校园生态场景" loading="lazy"
                      onerror="this.style.display='none';this.parentElement.querySelector('.fallback-img').style.display='flex';">
                 <div class="fallback-img" style="display:none; min-height:300px; background:var(--bg-secondary); align-items:center; justify-content:center; color:var(--text-gray);">
                     <i class="fa-solid fa-image"></i> 图片加载中...
                 </div>
             </div>
 
-            <!-- ========= 新增：6宫格卡片 ========= -->
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#e74c3c;"><i class="fa-solid fa-bullhorn"></i></div>
-                    <div class="service-text">
-                        <h3>校园传媒</h3>
-                        <p>校园新媒体矩阵，品牌推广、活动策划、内容运营，精准触达百万大学生。</p>
-                    </div>
+                    <div class="service-text"><h3>校园传媒</h3><p>校园新媒体矩阵，品牌推广、活动策划、内容运营，精准触达百万大学生。</p></div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#3498db;"><i class="fa-solid fa-truck-fast"></i></div>
-                    <div class="service-text">
-                        <h3>生活服务</h3>
-                        <p>跑腿代购、校园配送、生活服务，便捷高效，全面提升校园生活品质。</p>
-                    </div>
+                    <div class="service-text"><h3>生活服务</h3><p>跑腿代购、校园配送、生活服务，便捷高效，全面提升校园生活品质。</p></div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#2ecc71;"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <div class="service-text">
-                        <h3>电商零售</h3>
-                        <p>数码、美妆、日用品等，精选好物，品质保障，打造学生专属商城。</p>
-                    </div>
+                    <div class="service-text"><h3>电商零售</h3><p>数码、美妆、日用品等，精选好物，品质保障，打造学生专属商城。</p></div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#f39c12;"><i class="fa-solid fa-rotate"></i></div>
-                    <div class="service-text">
-                        <h3>二手交易</h3>
-                        <p>安全诚信的二手交易平台，闲置互换，资源再利用，促进绿色校园。</p>
-                    </div>
+                    <div class="service-text"><h3>二手交易</h3><p>安全诚信的二手交易平台，闲置互换，资源再利用，促进绿色校园。</p></div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#9b59b6;"><i class="fa-solid fa-book-open"></i></div>
-                    <div class="service-text">
-                        <h3>知识共享</h3>
-                        <p>期末资料、学习经验、考研竞赛，助力学业成长，构建学习共同体。</p>
-                    </div>
+                    <div class="service-text"><h3>知识共享</h3><p>期末资料、学习经验、考研竞赛，助力学业成长，构建学习共同体。</p></div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-box" style="background:#1abc9c;"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="service-text">
-                        <h3>创业孵化</h3>
-                        <p>项目孵化、资源对接、创业培训，陪伴青年创业，从0到1全程扶持。</p>
-                    </div>
+                    <div class="service-text"><h3>创业孵化</h3><p>项目孵化、资源对接、创业培训，陪伴青年创业，从0到1全程扶持。</p></div>
                 </div>
             </div>
 
-            <!-- ========= 原有产品卡片 (保留) ========= -->
             <div class="products-grid" style="margin-top: 50px;">
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-building-columns"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">校园传媒</span>
-                        <h3>品牌推广与社群运营</h3>
-                        <p>覆盖全国高校的社群矩阵，为品牌提供精准校园推广方案与数字化营销服务。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-building-columns"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">校园传媒</span><h3>品牌推广与社群运营</h3><p>覆盖全国高校的社群矩阵，为品牌提供精准校园推广方案与数字化营销服务。</p></div>
                 </div>
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">生活服务</span>
-                        <h3>校园生活一站式平台</h3>
-                        <p>整合外卖、跑腿、打印、洗衣等高频校园服务，提升学生生活便利度。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-utensils"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">生活服务</span><h3>校园生活一站式平台</h3><p>整合外卖、跑腿、打印、洗衣等高频校园服务，提升学生生活便利度。</p></div>
                 </div>
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">校园电商</span>
-                        <h3>学生专属商城</h3>
-                        <p>严选数码3C、文创周边、宿舍好物，打造高性价比的学生购物体验。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-cart-shopping"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">校园电商</span><h3>学生专属商城</h3><p>严选数码3C、文创周边、宿舍好物，打造高性价比的学生购物体验。</p></div>
                 </div>
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-rotate"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">二手交易</span>
-                        <h3>校内闲置流转</h3>
-                        <p>搭建安全可靠的校园二手书、电子产品及生活用品交易平台，促进资源循环利用。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-rotate"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">二手交易</span><h3>校内闲置流转</h3><p>搭建安全可靠的校园二手书、电子产品及生活用品交易平台，促进资源循环利用。</p></div>
                 </div>
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-book-open"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">知识共享</span>
-                        <h3>学习资料与经验交流</h3>
-                        <p>聚合学霸笔记、考研考公资料、技能课程，构建校园知识共享社区。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-book-open"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">知识共享</span><h3>学习资料与经验交流</h3><p>聚合学霸笔记、考研考公资料、技能课程，构建校园知识共享社区。</p></div>
                 </div>
                 <div class="product-card">
-                    <div class="product-card-placeholder">
-                        <i class="fa-solid fa-rocket"></i>
-                        <span>请添加图片</span>
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-tag">创业孵化</span>
-                        <h3>青年创业扶持计划</h3>
-                        <p>提供启动资金、导师指导、办公空间及资源对接，助力大学生从0到1开展创业项目。</p>
-                    </div>
+                    <div class="product-card-placeholder"><i class="fa-solid fa-rocket"></i><span>请添加图片</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">创业孵化</span><h3>青年创业扶持计划</h3><p>提供启动资金、导师指导、办公空间及资源对接，助力大学生从0到1开展创业项目。</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 企业文化 (原有) ==================== -->
     <section class="section culture-section" id="culture">
         <div class="section-inner">
             <span class="section-label">企业文化</span>
             <div class="gold-line"></div>
             <h2 class="section-title">活力团队 · 创业精神</h2>
-            <p class="section-desc">
-                澳鼎集团倡导"创新、合作、共享、共赢"的价值观，定期组织校园合伙人聚会与团建活动，打造充满激情与创造力的青年团队。
-            </p>
+            <p class="section-desc">澳鼎集团倡导“创新、合作、共享、共赢”的价值观，定期组织校园合伙人聚会与团建活动。</p>
             <div class="culture-grid">
                 <div class="culture-image-wrap">
-                    <img src="https://i.postimg.cc/5NCcjDfD/6ad9ea966c97eeae4eefdf87e841ac.jpg"
-                    alt="澳鼎集团兄弟聚餐 - 团队建设"
-                    loading="lazy"
-                    onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
-                    <div class="fallback-placeholder" style="display:none;min-height:350px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);">
-                        <i class="fa-solid fa-users"></i> 图片加载中...
-                    </div>
-                    <span class="culture-image-label">🏆 校园合伙人聚餐 · 兄弟情谊</span>
+                    <img src="https://i.postimg.cc/5NCcjDfD/6ad9ea966c97eeae4eefdf87e841ac.jpg" alt="团队聚餐" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder" style="display:none;min-height:350px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);"><i class="fa-solid fa-users"></i> 图片加载中...</div>
+                    <span class="culture-image-label">🏆 校园合伙人聚餐</span>
                 </div>
                 <div class="culture-text">
                     <h3>青春同行 · 共创共赢</h3>
-                    <p>
-                        在澳鼎，我们不仅是创业伙伴，更是志同道合的挚友。每一次相聚都凝聚着对校园事业的热情与执着。我们坚信，充满活力的青年团队是驱动校园生态持续进化的核心引擎。
-                    </p>
+                    <p>在澳鼎，我们不仅是创业伙伴，更是志同道合的挚友。每一次相聚都凝聚着对校园事业的热情与执着。</p>
                     <ul class="culture-features">
                         <li><i class="fa-solid fa-check-circle"></i> 定期校园合伙人峰会</li>
                         <li><i class="fa-solid fa-check-circle"></i> 扁平化管理和创新氛围</li>
                         <li><i class="fa-solid fa-check-circle"></i> 完善的合伙人成长与激励机制</li>
-                        <li><i class="fa-solid fa-check-circle"></i> 跨校资源交流与共享</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 董事长风采 (原有) ==================== -->
     <section class="section leader-section" id="leader">
         <div class="section-inner">
             <span class="section-label">董事长风采</span>
             <div class="gold-line"></div>
             <h2 class="section-title">掌舵人办公室</h2>
-            <p class="section-desc">
-                董事长办公室是集团战略决策的核心场所，见证了无数次关于校园生态布局与青年创业扶持的重要决策。
-            </p>
+            <p class="section-desc">董事长办公室是集团战略决策的核心场所，见证了无数次关于校园生态布局的重要决策。</p>
             <div class="leader-grid">
                 <div class="leader-text">
                     <h3>远见卓识 · 赋能青年</h3>
                     <div class="leader-name">澳鼎集团董事长</div>
-                    <p>
-                        自集团创立以来，董事长始终致力于将商业资源与校园场景深度融合，用前瞻性视野引领澳鼎成为校园生态运营的标杆。办公室内每一处细节，都彰显着对青年成长与创新的深切关注。
-                    </p>
-                    <p>
-                        从这里出发的每一个战略，都旨在为大学生提供更优质的校园服务体验，并搭建从校园走向社会的创业桥梁。
-                    </p>
-                    <div class="leader-quote">
-                        "创新、合作、共享、共赢——让每一个校园梦想都有生长的土壤。"
-                    </div>
+                    <p>自集团创立以来，董事长始终致力于将商业资源与校园场景深度融合，用前瞻性视野引领澳鼎成为校园生态运营的标杆。</p>
+                    <div class="leader-quote">"创新、合作、共享、共赢——让每一个校园梦想都有生长的土壤。"</div>
                 </div>
                 <div class="leader-image-wrap">
-                    <img src="https://i.postimg.cc/HsyGjFpC/16f09cfbf37fd0aab9d230c2f2a610.jpg"
-                    alt="澳鼎集团董事长办公室"
-                    loading="lazy"
-                    onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
-                    <div class="fallback-placeholder" style="display:none;min-height:380px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);">
-                        <i class="fa-solid fa-crown"></i> 图片加载中...
-                    </div>
+                    <img src="https://i.postimg.cc/HsyGjFpC/16f09cfbf37fd0aab9d230c2f2a610.jpg" alt="董事长办公室" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder" style="display:none;min-height:380px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);"><i class="fa-solid fa-crown"></i> 图片加载中...</div>
                     <span class="leader-image-label">🏢 董事长办公室</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 新闻动态 ==================== -->
     <section class="section" id="news" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">新闻动态</span>
             <div class="gold-line"></div>
             <h2 class="section-title">生态最新资讯</h2>
-            <p class="section-desc">
-                了解澳鼎集团在校园生态布局、创业孵化成果及高校合作方面的最新动态。
-            </p>
             <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-date">2026年7月 · 生态拓展</div>
-                    <h4>澳鼎校园社群覆盖突破20所高校</h4>
-                    <p>社群矩阵日均活跃用户超5万，为校园品牌推广与生活服务奠定坚实基础。</p>
-                    <span class="read-more">阅读全文 →</span>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">2026年6月 · 创业孵化</div>
-                    <h4>第三期校园创业扶持计划启动</h4>
-                    <p>本期计划投入500万种子基金，重点支持校园电商、知识共享等领域创业项目。</p>
-                    <span class="read-more">阅读全文 →</span>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">2026年5月 · 社会责任</div>
-                    <h4>澳鼎发起"大学生数字技能公益培训"</h4>
-                    <p>联合多家企业为5000+学生提供免费新媒体运营与电商直播课程。</p>
-                    <span class="read-more">阅读全文 →</span>
-                </div>
+                <div class="news-card"><div class="news-date">2026.07</div><h4>校园社群覆盖突破20所高校</h4><p>日均活跃用户超5万，为品牌推广奠定基础。</p></div>
+                <div class="news-card"><div class="news-date">2026.06</div><h4>第三期创业扶持计划启动</h4><p>投入500万种子基金，重点支持电商与知识共享项目。</p></div>
+                <div class="news-card"><div class="news-date">2026.05</div><h4>大学生数字技能公益培训</h4><p>为5000+学生提供免费新媒体运营课程。</p></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 合作伙伴 ==================== -->
     <section class="section" id="partners">
         <div class="section-inner" style="text-align:center;">
             <span class="section-label">合作伙伴</span>
             <div class="gold-line" style="margin:0 auto 20px;"></div>
             <h2 class="section-title">携手共建校园生态</h2>
-            <p class="section-desc" style="margin-left:auto;margin-right:auto;">
-                与众多知名品牌、高校社团及创业机构建立深度合作，共同赋能青年成长。
-            </p>
             <div class="partners-row">
-                <div class="partner-placeholder">请添加Logo</div>
-                <div class="partner-placeholder">请添加Logo</div>
-                <div class="partner-placeholder">请添加Logo</div>
-                <div class="partner-placeholder">请添加Logo</div>
                 <div class="partner-placeholder">请添加Logo</div>
                 <div class="partner-placeholder">请添加Logo</div>
                 <div class="partner-placeholder">请添加Logo</div>
@@ -1532,38 +1384,20 @@
         </div>
     </section>
 
-    <!-- ==================== 联系我们 ==================== -->
     <section class="section contact-section" id="contact">
         <div class="section-inner">
             <span class="section-label">联系我们</span>
             <div class="gold-line"></div>
             <h2 class="section-title">加入澳鼎生态</h2>
-            <p class="section-desc">
-                无论你是寻求合作的高校社团、品牌方，还是想成为校园创业合伙人，都欢迎联系我们。
-            </p>
             <div class="contact-grid">
                 <div>
-                    <div class="contact-info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span><strong>集团总部</strong><br>请添加地址信息</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span><strong>联系电话</strong><br>请添加电话号码</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span><strong>电子邮箱</strong><br>请添加邮箱地址</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <span><strong>办公时间</strong><br>周一至周五 9:00 - 18:00</span>
-                    </div>
+                    <div class="contact-info-item"><i class="fa-solid fa-location-dot"></i><span><strong>集团总部</strong><br>请添加地址信息</span></div>
+                    <div class="contact-info-item"><i class="fa-solid fa-phone"></i><span><strong>联系电话</strong><br>请添加电话号码</span></div>
+                    <div class="contact-info-item"><i class="fa-solid fa-envelope"></i><span><strong>电子邮箱</strong><br>请添加邮箱地址</span></div>
                 </div>
                 <form class="contact-form" onsubmit="event.preventDefault();alert('感谢你的留言！我们会尽快回复哦～ ✨');">
                     <input type="text" placeholder="你的名字" required>
                     <input type="email" placeholder="电子邮箱" required>
-                    <input type="tel" placeholder="联系电话">
                     <textarea placeholder="想对我们说什么呢？" required></textarea>
                     <button type="submit" class="btn btn-gold" style="width:100%;">发送留言 💌</button>
                 </form>
@@ -1571,148 +1405,54 @@
         </div>
     </section>
 
-    <!-- ==================== 页脚 ==================== -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-col">
-                <h4>澳鼎集团</h4>
-                <p style="color:var(--text-gray);font-size:0.85rem;letter-spacing:1px;line-height:1.8;">
-                    专注于校园生态运营与青年创业孵化。<br>
-                    创新、合作、共享、共赢，赋能每一个校园梦想。
-                </p>
-            </div>
-            <div class="footer-col">
-                <h4>快速导航</h4>
-                <ul>
-                    <li><a href="#hero">首页</a></li>
-                    <li><a href="#about">集团概况</a></li>
-                    <li><a href="#products">核心业务</a></li>
-                    <li><a href="#culture">企业文化</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>业务板块</h4>
-                <ul>
-                    <li><a href="#products">校园传媒</a></li>
-                    <li><a href="#products">生活服务</a></li>
-                    <li><a href="#products">校园电商</a></li>
-                    <li><a href="#products">创业孵化</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>关注我们</h4>
-                <ul>
-                    <li><a href="#">微信公众号</a></li>
-                    <li><a href="#">抖音校园号</a></li>
-                    <li><a href="#">小红书</a></li>
-                    <li><a href="#contact">成为合伙人</a></li>
-                </ul>
-            </div>
+            <div class="footer-col"><h4>澳鼎集团</h4><p style="color:var(--text-gray);">校园生态运营与青年创业孵化平台</p></div>
+            <div class="footer-col"><h4>快速导航</h4><ul><li><a href="#hero">首页</a></li><li><a href="#about">集团概况</a></li></ul></div>
+            <div class="footer-col"><h4>业务板块</h4><ul><li><a href="#products">校园传媒</a></li><li><a href="#products">生活服务</a></li></ul></div>
+            <div class="footer-col"><h4>关注我们</h4><ul><li><a href="#">微信公众号</a></li><li><a href="#">抖音校园号</a></li></ul></div>
         </div>
-        <div class="footer-bottom">
-            © 2026 澳鼎集团 Aoding Group. All Rights Reserved. | 请添加备案号
-        </div>
+        <div class="footer-bottom">© 2026 澳鼎集团 | 请添加备案号</div>
     </footer>
 
-    <!-- 回到顶部 -->
-    <button class="back-to-top" id="backToTop" aria-label="回到顶部">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <button class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
 
     <script>
         (function() {
             const canvas = document.getElementById('particles-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
-            let animationId;
-
-            function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            resizeCanvas();
-            window.addEventListener('resize', () => {
-                resizeCanvas();
-                initParticles();
-            });
-
-            function initParticles() {
-                const count = Math.min(Math.floor(window.innerWidth * 0.08), 120);
-                particles = [];
-                for (let i = 0; i < count; i++) {
-                    particles.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height,
-                        vx: (Math.random() - 0.5) * 0.4,
-                        vy: (Math.random() - 0.5) * 0.4,
-                        radius: Math.random() * 1.5 + 0.5,
-                        alpha: Math.random() * 0.5 + 0.2,
-                        alphaSpeed: (Math.random() - 0.5) * 0.005,
-                    });
-                }
-            }
-            initParticles();
-
-            function drawParticles() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                particles.forEach((p, i) => {
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    p.alpha += p.alphaSpeed;
-                    if (p.alpha > 0.7) p.alphaSpeed = -Math.abs(p.alphaSpeed);
-                    if (p.alpha < 0.1) p.alphaSpeed = Math.abs(p.alphaSpeed);
-                    if (p.x < -20) p.x = canvas.width + 20;
-                    if (p.x > canvas.width + 20) p.x = -20;
-                    if (p.y < -20) p.y = canvas.height + 20;
-                    if (p.y > canvas.height + 20) p.y = -20;
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(200,170,110,${p.alpha})`;
-                    ctx.fill();
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const dx = p.x - particles[j].x;
-                        const dy = p.y - particles[j].y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 130) {
-                            ctx.beginPath();
-                            ctx.moveTo(p.x, p.y);
-                            ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.strokeStyle = `rgba(200,170,110,${0.06 * (1 - dist/130)})`;
-                            ctx.lineWidth = 0.5;
-                            ctx.stroke();
-                        }
-                    }
+            function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+            resize(); window.addEventListener('resize', resize);
+            for(let i=0;i<80;i++) particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4,r:Math.random()*1.5+0.5,a:Math.random()*0.5+0.2});
+            function draw() {
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                particles.forEach(p => {
+                    p.x+=p.vx; p.y+=p.vy;
+                    if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+                    if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+                    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+                    ctx.fillStyle = `rgba(200,170,110,${p.a})`; ctx.fill();
                 });
-                animationId = requestAnimationFrame(drawParticles);
+                requestAnimationFrame(draw);
             }
-            drawParticles();
+            draw();
         })();
 
         const navbar = document.getElementById('navbar');
         const backToTop = document.getElementById('backToTop');
-
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            if (scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            if (scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            if(window.scrollY>60) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+            if(window.scrollY>500) backToTop.classList.add('visible'); else backToTop.classList.remove('visible');
         });
+        backToTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
 
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
-
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
-
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -1720,97 +1460,32 @@
             });
         });
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        function animateNumbers() {
-            const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-            statNumbers.forEach(el => {
-                const target = parseInt(el.getAttribute('data-target'));
-                const suffix = el.getAttribute('data-suffix') || '';
-                const duration = 2000;
-                const startTime = performance.now();
-                const startVal = 0;
-
-                function update(currentTime) {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = Math.floor(startVal + (target - startVal) * eased);
-                    el.textContent = current.toLocaleString() + suffix;
-                    if (progress < 1) {
-                        requestAnimationFrame(update);
-                    } else {
-                        el.textContent = target.toLocaleString() + suffix;
-                    }
-                }
-                requestAnimationFrame(update);
-            });
-        }
-
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateNumbers();
+                if(entry.isIntersecting) {
+                    document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target'));
+                        const suffix = el.getAttribute('data-suffix')||'';
+                        let start = 0;
+                        const dur = 2000; const st = performance.now();
+                        function upd(now) {
+                            const prog = Math.min((now-st)/dur,1);
+                            el.textContent = Math.floor(start + (target-start)*prog) + suffix;
+                            if(prog<1) requestAnimationFrame(upd);
+                            else el.textContent = target + suffix;
+                        }
+                        requestAnimationFrame(upd);
+                    });
                     statsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.4 });
+        }, {threshold:0.4});
+        const aboutSec = document.getElementById('about');
+        if(aboutSec) statsObserver.observe(aboutSec);
 
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-            statsObserver.observe(aboutSection);
-        }
-
-        const fadeInElements = document.querySelectorAll(
-            '.product-card, .news-card, .stat-card, .culture-image-wrap, .leader-image-wrap, .partner-placeholder, .service-card'
-        );
-
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    fadeObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-        fadeInElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-            fadeObserver.observe(el);
+        document.querySelector('.nav-search-input').addEventListener('keypress', function(e) {
+            if(e.key==='Enter' && this.value.trim()) alert('搜索：'+this.value.trim());
         });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetEl = document.querySelector(targetId);
-                if (targetEl) {
-                    e.preventDefault();
-                    const navHeight = navbar.offsetHeight + 10;
-                    const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                }
-            });
-        });
-
-        const searchInput = document.querySelector('.nav-search-input');
-        if (searchInput) {
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const query = this.value.trim();
-                    if (query) {
-                        alert('搜索功能：您搜索了 "' + query + '"\n（此处可接入真实搜索功能）');
-                    }
-                }
-            });
-        }
-
-        console.log('🎓 澳鼎集团·校园生态平台已就绪！', 'color:#d4af37; font-size:1.2rem;');
     </script>
 </body>
 </html>
