@@ -21,6 +21,8 @@
             --text-light: #b8c1cc;
             --border-subtle: rgba(255, 255, 255, 0.06);
             --border-gold: rgba(201, 169, 110, 0.25);
+            --accent-blue: #1e5a8a;
+            --accent-teal: #0d4f5c;
             --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.5);
             --shadow-gold: 0 0 40px rgba(201, 169, 110, 0.15);
             --radius-sm: 8px;
@@ -52,6 +54,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
+        /* 粒子背景 */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -63,6 +66,7 @@
             opacity: 0.5;
         }
 
+        /* ============ 导航栏 (原有) ============ */
         .navbar {
             position: fixed;
             top: 0;
@@ -171,6 +175,7 @@
             background: linear-gradient(135deg, var(--gold-light), #e0c060);
             color: #060d18;
         }
+        /* 搜索框 */
         .nav-search-wrap {
             position: relative;
             display: flex;
@@ -210,6 +215,7 @@
         .nav-search-input:focus~.nav-search-icon {
             color: #fff;
         }
+        /* 汉堡菜单 */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -288,6 +294,7 @@
             }
         }
 
+        /* ============ HERO (原有) ============ */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -330,14 +337,8 @@
             animation: fadeInUp 1s ease-out;
         }
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .hero-badge {
             display: inline-block;
@@ -440,13 +441,8 @@
             z-index: 2;
         }
         @keyframes bounceDown {
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(16px);
-            }
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(16px); }
         }
         .hero-scroll-indicator span {
             font-size: 0.7rem;
@@ -459,6 +455,7 @@
             font-size: 1.1rem;
         }
 
+        /* ============ 通用板块 ============ */
         .section {
             position: relative;
             z-index: 1;
@@ -501,6 +498,7 @@
             margin-bottom: 20px;
         }
 
+        /* ============ 集团概况数据 (原有) ============ */
         .about-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -557,6 +555,90 @@
             letter-spacing: 2px;
         }
 
+        /* ============ 新增：通栏大图样式 ============ */
+        .full-width-image {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-card);
+            margin-bottom: 60px;
+            transition: all var(--transition);
+        }
+        .full-width-image:hover {
+            border-color: var(--border-gold);
+            box-shadow: var(--shadow-gold), var(--shadow-card);
+        }
+        .full-width-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .full-width-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* ============ 新增：6宫格卡片样式 ============ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+        .service-card:hover {
+            border-color: var(--border-gold);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-gold), var(--shadow-card);
+        }
+        .service-icon-box {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all var(--transition);
+        }
+        .service-card:hover .service-icon-box {
+            transform: scale(1.05);
+        }
+        .service-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .service-text p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            letter-spacing: 0.5px;
+            line-height: 1.7;
+        }
+
+        /* ============ 原有产品卡片 (保留) ============ */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -633,6 +715,7 @@
             margin-bottom: 10px;
         }
 
+        /* ============ 企业文化 (原有) ============ */
         .culture-section {
             background: var(--bg-primary);
             position: relative;
@@ -717,6 +800,7 @@
             font-size: 1rem;
         }
 
+        /* ============ 董事长风采 (原有) ============ */
         .leader-section {
             position: relative;
             z-index: 1;
@@ -813,6 +897,7 @@
             margin-top: 20px;
         }
 
+        /* ============ 新闻动态 ============ */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -875,6 +960,7 @@
             letter-spacing: 3px;
         }
 
+        /* ============ 合作伙伴 ============ */
         .partners-row {
             display: flex;
             flex-wrap: wrap;
@@ -903,6 +989,7 @@
             background: rgba(201, 169, 110, 0.04);
         }
 
+        /* ============ 联系我们 ============ */
         .contact-section {
             background: var(--bg-primary);
             position: relative;
@@ -962,6 +1049,7 @@
             min-height: 120px;
         }
 
+        /* ============ 页脚 ============ */
         .footer {
             background: #040a14;
             border-top: 1px solid var(--border-subtle);
@@ -1023,6 +1111,7 @@
             letter-spacing: 2px;
         }
 
+        /* ============ 回到顶部 ============ */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -1054,33 +1143,6 @@
             border-color: var(--gold-dark);
             box-shadow: var(--shadow-gold);
             transform: translateY(-4px);
-        }
-
-        .img-placeholder-box {
-            width: 100%;
-            min-height: 220px;
-            background: var(--bg-secondary);
-            border: 2px dashed rgba(255, 255, 255, 0.2);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.35);
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            transition: all var(--transition);
-            cursor: pointer;
-        }
-        .img-placeholder-box:hover {
-            border-color: var(--gold-light);
-            color: var(--gold-light);
-            background: rgba(201, 169, 110, 0.03);
-        }
-        .img-placeholder-box i {
-            font-size: 2.5rem;
-            opacity: 0.5;
         }
 
         @media (max-width: 768px) {
@@ -1121,8 +1183,10 @@
     </style>
 </head>
 <body>
+    <!-- 粒子背景画布 -->
     <canvas id="particles-canvas"></canvas>
 
+    <!-- ==================== 导航栏 ==================== -->
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a href="#hero" class="nav-logo">
@@ -1149,6 +1213,7 @@
         </div>
     </nav>
 
+    <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="hero-bg-gradient"></div>
         <div class="hero-grid-lines"></div>
@@ -1172,6 +1237,7 @@
         </div>
     </section>
 
+    <!-- ==================== 集团概况 ==================== -->
     <section class="section" id="about">
         <div class="section-inner">
             <span class="section-label">集团概况</span>
@@ -1180,6 +1246,7 @@
             <p class="section-desc">
                 澳鼎集团是一家专注于校园生态运营与青年创业孵化的综合性平台，以校园场景为基础，依托数字化运营能力，持续构建覆盖高校生活、校园服务、资源整合及创业发展的多元生态体系。
             </p>
+            <!-- 数据统计 -->
             <div class="about-stats">
                 <div class="stat-card">
                     <div class="stat-number" data-target="20" data-suffix="+">0</div>
@@ -1201,18 +1268,76 @@
         </div>
     </section>
 
+    <!-- ==================== 核心业务 (原有板块 + 新增内容) ==================== -->
     <section class="section" id="products" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">核心业务</span>
             <div class="gold-line"></div>
             <h2 class="section-title">多元校园生态</h2>
             <p class="section-desc">
-                集团围绕校园传媒、生活服务、电商、二手交易、知识共享、创业孵化及数字科技等领域持续布局，打造综合性校园服务平台。
+                集团围绕校园传媒、生活服务、电商零售、二手交易、知识共享及创业孵化六大板块，打造综合性校园服务平台。
             </p>
-            <div class="products-grid">
+
+            <!-- ========= 新增：通栏大图 ========= -->
+            <div class="full-width-image">
+                <img src="https://i.postimg.cc/d0jpzSd1/84030810-3A09-49E7-B4B0-73316BB6B3C3.png" alt="澳鼎校园生态场景" loading="lazy"
+                     onerror="this.style.display='none';this.parentElement.querySelector('.fallback-img').style.display='flex';">
+                <div class="fallback-img" style="display:none; min-height:300px; background:var(--bg-secondary); align-items:center; justify-content:center; color:var(--text-gray);">
+                    <i class="fa-solid fa-image"></i> 图片加载中...
+                </div>
+            </div>
+
+            <!-- ========= 新增：6宫格卡片 ========= -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#e74c3c;"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="service-text">
+                        <h3>校园传媒</h3>
+                        <p>校园新媒体矩阵，品牌推广、活动策划、内容运营，精准触达百万大学生。</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#3498db;"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="service-text">
+                        <h3>生活服务</h3>
+                        <p>跑腿代购、校园配送、生活服务，便捷高效，全面提升校园生活品质。</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#2ecc71;"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div class="service-text">
+                        <h3>电商零售</h3>
+                        <p>数码、美妆、日用品等，精选好物，品质保障，打造学生专属商城。</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#f39c12;"><i class="fa-solid fa-rotate"></i></div>
+                    <div class="service-text">
+                        <h3>二手交易</h3>
+                        <p>安全诚信的二手交易平台，闲置互换，资源再利用，促进绿色校园。</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#9b59b6;"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="service-text">
+                        <h3>知识共享</h3>
+                        <p>期末资料、学习经验、考研竞赛，助力学业成长，构建学习共同体。</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box" style="background:#1abc9c;"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="service-text">
+                        <h3>创业孵化</h3>
+                        <p>项目孵化、资源对接、创业培训，陪伴青年创业，从0到1全程扶持。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========= 原有产品卡片 (保留) ========= -->
+            <div class="products-grid" style="margin-top: 50px;">
                 <div class="product-card">
                     <div class="product-card-placeholder">
-                        <i class="fa-solid fa-bullhorn"></i>
+                        <i class="fa-solid fa-building-columns"></i>
                         <span>请添加图片</span>
                     </div>
                     <div class="product-card-body">
@@ -1280,13 +1405,14 @@
         </div>
     </section>
 
+    <!-- ==================== 企业文化 (原有) ==================== -->
     <section class="section culture-section" id="culture">
         <div class="section-inner">
             <span class="section-label">企业文化</span>
             <div class="gold-line"></div>
             <h2 class="section-title">活力团队 · 创业精神</h2>
             <p class="section-desc">
-                澳鼎集团倡导“创新、合作、共享、共赢”的价值观，定期组织校园合伙人聚会与团建活动，打造充满激情与创造力的青年团队。
+                澳鼎集团倡导"创新、合作、共享、共赢"的价值观，定期组织校园合伙人聚会与团建活动，打造充满激情与创造力的青年团队。
             </p>
             <div class="culture-grid">
                 <div class="culture-image-wrap">
@@ -1294,9 +1420,8 @@
                     alt="澳鼎集团兄弟聚餐 - 团队建设"
                     loading="lazy"
                     onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
-                    <div class="fallback-placeholder img-placeholder-box" style="display:none;min-height:350px;">
-                        <i class="fa-solid fa-users"></i>
-                        <span>图片加载中...</span>
+                    <div class="fallback-placeholder" style="display:none;min-height:350px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);">
+                        <i class="fa-solid fa-users"></i> 图片加载中...
                     </div>
                     <span class="culture-image-label">🏆 校园合伙人聚餐 · 兄弟情谊</span>
                 </div>
@@ -1316,6 +1441,7 @@
         </div>
     </section>
 
+    <!-- ==================== 董事长风采 (原有) ==================== -->
     <section class="section leader-section" id="leader">
         <div class="section-inner">
             <span class="section-label">董事长风采</span>
@@ -1343,9 +1469,8 @@
                     alt="澳鼎集团董事长办公室"
                     loading="lazy"
                     onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
-                    <div class="fallback-placeholder img-placeholder-box" style="display:none;min-height:380px;">
-                        <i class="fa-solid fa-crown"></i>
-                        <span>图片加载中...</span>
+                    <div class="fallback-placeholder" style="display:none;min-height:380px;background:var(--bg-secondary);align-items:center;justify-content:center;color:var(--text-gray);">
+                        <i class="fa-solid fa-crown"></i> 图片加载中...
                     </div>
                     <span class="leader-image-label">🏢 董事长办公室</span>
                 </div>
@@ -1353,6 +1478,7 @@
         </div>
     </section>
 
+    <!-- ==================== 新闻动态 ==================== -->
     <section class="section" id="news" style="background: var(--bg-primary);">
         <div class="section-inner">
             <span class="section-label">新闻动态</span>
@@ -1376,7 +1502,7 @@
                 </div>
                 <div class="news-card">
                     <div class="news-date">2026年5月 · 社会责任</div>
-                    <h4>澳鼎发起“大学生数字技能公益培训”</h4>
+                    <h4>澳鼎发起"大学生数字技能公益培训"</h4>
                     <p>联合多家企业为5000+学生提供免费新媒体运营与电商直播课程。</p>
                     <span class="read-more">阅读全文 →</span>
                 </div>
@@ -1384,6 +1510,7 @@
         </div>
     </section>
 
+    <!-- ==================== 合作伙伴 ==================== -->
     <section class="section" id="partners">
         <div class="section-inner" style="text-align:center;">
             <span class="section-label">合作伙伴</span>
@@ -1405,6 +1532,7 @@
         </div>
     </section>
 
+    <!-- ==================== 联系我们 ==================== -->
     <section class="section contact-section" id="contact">
         <div class="section-inner">
             <span class="section-label">联系我们</span>
@@ -1432,17 +1560,18 @@
                         <span><strong>办公时间</strong><br>周一至周五 9:00 - 18:00</span>
                     </div>
                 </div>
-                <form class="contact-form" onsubmit="event.preventDefault();alert('感谢您的留言，我们将尽快与您联系！');">
-                    <input type="text" placeholder="您的姓名" required>
+                <form class="contact-form" onsubmit="event.preventDefault();alert('感谢你的留言！我们会尽快回复哦～ ✨');">
+                    <input type="text" placeholder="你的名字" required>
                     <input type="email" placeholder="电子邮箱" required>
                     <input type="tel" placeholder="联系电话">
-                    <textarea placeholder="请输入您的留言内容或合作意向..." required></textarea>
-                    <button type="submit" class="btn btn-gold" style="width:100%;">提交留言</button>
+                    <textarea placeholder="想对我们说什么呢？" required></textarea>
+                    <button type="submit" class="btn btn-gold" style="width:100%;">发送留言 💌</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- ==================== 页脚 ==================== -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-col">
@@ -1485,6 +1614,7 @@
         </div>
     </footer>
 
+    <!-- 回到顶部 -->
     <button class="back-to-top" id="backToTop" aria-label="回到顶部">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -1634,7 +1764,7 @@
         }
 
         const fadeInElements = document.querySelectorAll(
-            '.product-card, .news-card, .stat-card, .culture-image-wrap, .leader-image-wrap, .partner-placeholder'
+            '.product-card, .news-card, .stat-card, .culture-image-wrap, .leader-image-wrap, .partner-placeholder, .service-card'
         );
 
         const fadeObserver = new IntersectionObserver((entries) => {
@@ -1662,8 +1792,7 @@
                 if (targetEl) {
                     e.preventDefault();
                     const navHeight = navbar.offsetHeight + 10;
-                    const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset -
-                        navHeight;
+                    const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
                     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                 }
             });
@@ -1681,9 +1810,7 @@
             });
         }
 
-        console.log('%c澳鼎集团·校园生态平台已就绪 %c🚀',
-            'font-size:1.4rem;font-weight:bold;color:#d4af37;letter-spacing:3px;',
-            'font-size:1rem;');
+        console.log('🎓 澳鼎集团·校园生态平台已就绪！', 'color:#d4af37; font-size:1.2rem;');
     </script>
 </body>
 </html>
