@@ -20,8 +20,6 @@
             --border-gold: rgba(201, 169, 110, 0.25);
             --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.5);
             --shadow-gold: 0 0 40px rgba(201, 169, 110, 0.15);
-            --radius-sm: 8px;
-            --radius: 12px;
             --radius-lg: 20px;
             --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --font-heading: 'Georgia', 'Times New Roman', 'Songti SC', serif;
@@ -95,6 +93,7 @@
         @media (max-width:600px) { .products-grid { grid-template-columns:1fr; } }
         .product-card { background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); overflow:hidden; transition:all var(--transition); cursor:pointer; }
         .product-card:hover { border-color:var(--border-gold); transform:translateY(-8px); box-shadow:var(--shadow-gold); }
+        .product-card-img { width:100%; height:220px; object-fit:cover; display:block; background:var(--bg-secondary); }
         .product-card-placeholder { width:100%; height:220px; background:var(--bg-secondary); display:flex; align-items:center; justify-content:center; color:var(--text-gray); flex-direction:column; gap:8px; }
         .product-card-placeholder i { font-size:2.5rem; color:rgba(255,255,255,0.2); }
         .product-card-body { padding:24px 22px 28px; }
@@ -127,12 +126,12 @@
         .news-card:hover { border-color:var(--border-gold); transform:translateY(-6px); box-shadow:var(--shadow-gold); }
         .news-date { font-size:0.75rem; color:var(--gold-light); }
         .partners-row { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
-        .partner-placeholder { width:130px; height:60px; border:1px dashed rgba(255,255,255,0.2); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:0.7rem; }
+        .partner-placeholder { width:130px; height:60px; border:1px dashed rgba(255,255,255,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:0.7rem; }
         .contact-section { background:var(--bg-primary); }
         .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; }
         .contact-info-item { display:flex; gap:14px; margin-bottom:24px; }
         .contact-info-item i { color:var(--gold-light); font-size:1.2rem; margin-top:4px; }
-        .contact-form input, .contact-form textarea { width:100%; padding:14px 18px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.03); color:#fff; font-size:0.9rem; margin-bottom:14px; outline:none; transition:all var(--transition); }
+        .contact-form input, .contact-form textarea { width:100%; padding:14px 18px; border-radius:8px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.03); color:#fff; font-size:0.9rem; margin-bottom:14px; outline:none; transition:all var(--transition); }
         .contact-form input:focus, .contact-form textarea:focus { border-color:var(--gold-light); box-shadow:0 0 20px var(--gold-glow); }
         .footer { background:#040a14; border-top:1px solid var(--border-subtle); padding:50px 40px 30px; }
         .footer-inner { max-width:1260px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
@@ -208,12 +207,42 @@
                 <div class="service-card"><div class="service-icon-box" style="background:#1abc9c;"><i class="fa-solid fa-rocket"></i></div><div class="service-text"><h3>创业孵化</h3><p>项目孵化、资源对接、创业培训，陪伴青年创业。</p></div></div>
             </div>
             <div class="products-grid">
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-building-columns"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">校园传媒</span><h3>品牌推广与社群运营</h3><p>覆盖全国高校社群矩阵，提供精准校园推广方案。</p></div></div>
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-utensils"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">生活服务</span><h3>校园生活一站式平台</h3><p>整合外卖、跑腿、打印、洗衣等高频校园服务。</p></div></div>
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-cart-shopping"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">校园电商</span><h3>学生专属商城</h3><p>严选数码3C、文创周边，打造高性价比购物体验。</p></div></div>
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-rotate"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">二手交易</span><h3>校内闲置流转</h3><p>安全可靠的校园二手书、电子产品交易平台。</p></div></div>
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-book-open"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">知识共享</span><h3>学习资料与经验交流</h3><p>聚合学霸笔记、考研考公资料，构建知识社区。</p></div></div>
-                <div class="product-card"><div class="product-card-placeholder"><i class="fa-solid fa-rocket"></i><span>请添加图片</span></div><div class="product-card-body"><span class="product-card-tag">创业孵化</span><h3>青年创业扶持计划</h3><p>提供启动资金、导师指导，助力从0到1创业。</p></div></div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/sgdk65JK/1822.jpg" alt="校园传媒" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-building-columns"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">校园传媒</span><h3>品牌推广与社群运营</h3><p>覆盖全国高校社群矩阵，提供精准校园推广方案。</p></div>
+                </div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/T3Mz7ncS/1823.jpg" alt="生活服务" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-utensils"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">生活服务</span><h3>校园生活一站式平台</h3><p>整合外卖、跑腿、打印、洗衣等高频校园服务。</p></div>
+                </div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/QdG24cqw/1824.jpg" alt="校园电商" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-cart-shopping"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">校园电商</span><h3>学生专属商城</h3><p>严选数码3C、文创周边，打造高性价比购物体验。</p></div>
+                </div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/qvrktPWn/1830.jpg" alt="二手交易" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-rotate"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">二手交易</span><h3>校内闲置流转</h3><p>安全可靠的校园二手书、电子产品交易平台。</p></div>
+                </div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/pLBPK0tf/1831.jpg" alt="知识共享" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-book-open"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">知识共享</span><h3>学习资料与经验交流</h3><p>聚合学霸笔记、考研考公资料，构建知识社区。</p></div>
+                </div>
+                <div class="product-card">
+                    <img class="product-card-img" src="https://i.postimg.cc/ht0KVCqb/1842.jpg" alt="创业孵化" loading="lazy"
+                         onerror="this.style.display='none';this.parentElement.querySelector('.fallback-placeholder').style.display='flex';">
+                    <div class="fallback-placeholder product-card-placeholder" style="display:none;"><i class="fa-solid fa-rocket"></i><span>图片加载中...</span></div>
+                    <div class="product-card-body"><span class="product-card-tag">创业孵化</span><h3>青年创业扶持计划</h3><p>提供启动资金、导师指导，助力从0到1创业。</p></div>
+                </div>
             </div>
         </div>
     </section>
